@@ -19,12 +19,12 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg flex items-center justify-center">
+            <div className="md:w-8 md:h-8 w-6 h-6 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <h1 className="md:text-2xl text-lg font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               HeyDrop
             </h1>
           </motion.div>
@@ -53,7 +53,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-7xl font-bold md:mb-6 mb-4 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Share Anything
               </span>
@@ -63,7 +63,7 @@ export default function HomePage() {
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="md:text-xl text-sm text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
               Create temporary spaces to share files, text, and URLs with anyone. 
               <br />
               <span className="text-orange-600 font-semibold">No registration required.</span>
@@ -86,7 +86,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto"
+          className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl pb-2 mx-auto"
         >
           <div className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm rounded-full px-4 py-3 border border-orange-100">
             <div className="w-8 h-8 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center">

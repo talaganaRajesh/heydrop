@@ -72,7 +72,7 @@ export default function ContentInput({ onSubmit }: ContentInputProps) {
   }
 
   return (
-    <div className="space-y-4 bg-gradient-to-br from-orange-50 via-amber-50 to-white p-4 rounded-xl">
+    <div className="md:space-y-4 bg-gradient-to-br from-orange-50 via-amber-50 to-white md:p-4 rounded-xl">
       {showFileUpload ? (
         <div className="space-y-4">
           <FileUpload onUpload={handleFileUpload} disabled={isUploading} />
@@ -93,7 +93,7 @@ export default function ContentInput({ onSubmit }: ContentInputProps) {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmitText} className="space-y-4">
+        <form onSubmit={handleSubmitText} className="md:space-y-4">
           <div className="relative">
             <textarea
               ref={textareaRef}
