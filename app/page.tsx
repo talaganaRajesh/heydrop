@@ -33,7 +33,7 @@ export default function HomePage() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            href="#"
+            href="https://github.com/talaganaRajesh/heydrop"
             className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
