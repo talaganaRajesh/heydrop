@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   generator: 'Next.js',
   applicationName: 'Hey Drop',
   authors: [{ name: 'Talagana Rajesh', url: 'https://talaganarajesh.vercel.app/' }],
-  keywords: ['file sharing', 'text sharing', 'Hey Drop', 'Talagana Rajesh', 'instant sharing', 'no login', 'secure file transfer'],
+  keywords: ['file sharing', 'text sharing', 'Hey Drop', 'Talagana Rajesh', 'instant sharing', 'no login', 'secure file transfer','Hey drop by talagana rajesh','talagana rajesh new project','hey drop rajesh','talagana rajesh file sharing website'],
   creator: 'Talagana Rajesh',
   publisher: 'Talagana Rajesh',
   metadataBase: new URL('https://heydrop.vercel.app'), // Replace with your deployed domain
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Hey Drop - Share anything instantly',
     description: 'One-click sharing of files and text. Fast, secure, and login-free.',
-    creator: '@your_twitter', // Replace if you have one
+    creator: '@Rajeshtalagana', // Replace if you have one
     images: ['/favicon.png'],
   },
 

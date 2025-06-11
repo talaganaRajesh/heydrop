@@ -80,7 +80,7 @@ export default function FileUpload({ onUpload, disabled }: FileUploadProps) {
           <div className="text-sm font-medium text-gray-700">
             {dragActive ? "Drop file here" : "Click to upload or drag and drop"}
           </div>
-          <p className="text-xs text-gray-500">Images, PDFs, documents, and other files (max 5MB)</p>
+          <p className="text-xs text-gray-500">Images, PDFs, documents, and other files (max 50MB)</p>
         </div>
       </motion.div>
     </div>
