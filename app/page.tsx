@@ -1,11 +1,47 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState } from "react"
 
 import CreateRoomButton from "@/components/CreateRoomButton"
 
+import { useEffect, useState } from 'react';
+
+
 export default function HomePage() {
+
+  // Define the type for the beforeinstallprompt event
+  interface BeforeInstallPromptEvent extends Event {
+    prompt: () => Promise<void>;
+    userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
+  }
+
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstall, setShowInstall] = useState(false);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      e.preventDefault();
+      const event = e as BeforeInstallPromptEvent;
+      setDeferredPrompt(event);
+      setShowInstall(true);
+    };
+
+    window.addEventListener('beforeinstallprompt', handler);
+
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
+
+  const installApp = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const choice = await deferredPrompt.userChoice;
+    if (choice.outcome === 'accepted') {
+      console.log('App installed');
+    }
+    setDeferredPrompt(null);
+    setShowInstall(false);
+  };
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-white">
       {/* Header */}
@@ -41,6 +77,15 @@ export default function HomePage() {
           </motion.a>
         </div>
       </nav>
+
+      {showInstall && (
+        <button
+          onClick={installApp}
+          className="fixed bottom-4 right-4 bg-orange-600 text-white p-3 rounded-xl shadow-lg"
+        >
+          Install HeyDrop
+        </button>
+      )}
 
       {/* Hero Section */}
       <main className="max-w-7xl mx-auto px-6 pt-16">
